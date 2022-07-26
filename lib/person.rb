@@ -12,6 +12,29 @@ class Person
         @happiness = 8
         @hygiene = 8
     end
+    def happiness=value
+        # if value < 10 || value > 0
+        # @happiness = value 
+        if value > 10 
+            @happiness = 10
+        elsif value < 0
+            @happiness = 0
+        else 
+            @happiness = value
+        end
+
+    end
+
+    def hygiene=value
+        if value > 10
+            @hygiene = 10
+        elsif value < 0
+            @hygiene =0
+        else
+            @hygiene = value
+        end
+        
+    end
 
     def happy?
         @happiness > 7
@@ -31,6 +54,7 @@ class Person
         self.hygiene += 4
     "♪ Rub-a-dub just relaxing in the tub ♫"
     end
+
 
     def work_out
         self.hygiene -= 3
